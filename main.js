@@ -32,8 +32,26 @@ valueDisplays.forEach((valueDisplay) => {
 
 //search
 
+// const searchIcon = document.getElementById('btnSearch');
+// const searchOverlay = document.getElementById('searchOverlay');
+
+// searchIcon.addEventListener('click', function () {
+//     searchOverlay.style.display = 'flex'; 
+// });
+
+// searchOverlay.addEventListener('click', function (e) {
+//     if (e.target === searchOverlay) {
+//         searchOverlay.style.display = 'none'; 
+//     }
+// });
+
+
+
+
+
 const searchIcon = document.getElementById('btnSearch');
 const searchOverlay = document.getElementById('searchOverlay');
+const closeSearch = document.getElementById('closeSearch');
 
 searchIcon.addEventListener('click', function () {
     searchOverlay.style.display = 'flex'; 
@@ -45,18 +63,32 @@ searchOverlay.addEventListener('click', function (e) {
     }
 });
 
-
-//choose language
-
-document.getElementById('lang').addEventListener('click', () => {
-console.log("clicked");
-
-})
+// X düyməsini tıkladıqda search overlay-i bağlayır
+closeSearch.addEventListener('click', function () {
+    searchOverlay.style.display = 'none';
+});
 
 
 
 
-// Wait for the page to fully load
+
+function toggleLines() {
+    var lines = document.getElementById("lines");
+    if (lines.style.display === "none" || lines.style.display === "") {
+        lines.style.display = "block";
+    } else {
+        lines.style.display = "none";
+    }
+}
+
+
+
+
+
+
+
+
+
 window.addEventListener('load', () => {
     const loadingOverlay = document.getElementById('loadingOverlay');
 });
